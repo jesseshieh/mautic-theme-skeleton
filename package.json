@@ -36,8 +36,8 @@
     "enableMinifier": true,
     "themes": [
       {
-        "name": "your-theme",
-        "verboseName": "Your Theme",
+        "name": "gigalixir-theme",
+        "verboseName": "Gigalixir Theme",
         "emailTemplateFile": "email.deafult.heml.twig"
       }
     ]

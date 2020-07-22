@@ -1,35 +1,111 @@
 <heml>
-    <head>
-        <style>
-            @include('../assets/styles/email.css')
-        </style>
-        <subject>{subject}</subject>
-        {% block head_extra %}{% endblock %}
-    </head>
-    <body>
-    <div data-slot-container="">
-        {% block header %}
-            <div data-slot="image" class="logo">
-                <a target="_blank" href="https://logicify.com">
-                    <img src="{{ getAssetUrl('themes/'~template~'/assets/img/logo.png', null, null, true) }}"
-                    alt="Company Logo"/>
-                </a>
+  <head>
+    <subject>Need Help Deploying?</subject>
+    <preview>We're here to help</preview>
+    <style>
+      body {
+        background: #FFF;
+        padding: 20px;
+      }
+      container {
+        background: white;
+        margin: 0px auto;
+        max-width: 400px;
+      }
+      a img {
+        padding: 10px;
+        width: 157px;
+        height: 43px;
+        margin: auto;
+      }
+      .main {
+        background: rgb(245,245,245);
+        padding: 40px 60px 50px 60px;
+      }
+      h1 {
+        margin: 0;
+        padding: 0 0 10px 0;
+        font-weight: bold;
+        font-size: 24px;
+      }
+      .footer {
+        padding: 20px;
+        color: #CCC;
+        font-size: 10px;
+        line-height: 14px;
+      }
+      .footer a {
+        text-decoration: none;
+        color: #CCC;
+      }
+      div {
+        text-align: center
+      }
+      /* button { */
+      /*   background-color: #425AE6; */
+      /*   padding: 15px 25px */
+      /* } */
+      .unsubscribe, .copyright {
+        padding: 5px;
+      }
+      .twitter {
+        padding: 5px 0 15px 0;
+      }
+      .twitter img {
+        width: 24px;
+        height: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <container>
+      <row>
+        <column>
+          <a href="https://gigalixir.com">
+            <img src="https://gigalixir.com/images/gigalixir_logo.png" alt="Gigalixir" />
+          </a>
+        </column>
+      </row>
+      <row class="main">
+        <column>
+          <h1>
+            <div data-slot-container="1">
+              <div data-slot="text">
+                Just Hit Reply
+              </div>
             </div>
-        {% endblock %}
-    </div>
-    <div data-slot-container="">
-        {% block content %}
-
-        {% endblock %}
-    </div>
-    <div data-slot-container="">
-        {% block footer %}
+          </h1>
+          <div data-slot-container="1">
             <div data-slot="text">
-                <div class="footer">
-                    {unsubscribe_text} | {webview_text}
-                </div>
+              If there's anything we can do to help you get going, just hit reply.
+              For step by step instructions on how to deploy, click the button below.
             </div>
-        {% endblock %}
-    </div>
-    </body>
+            <!-- Drag a button here with background #425AE6 padding-top 20 and customize the text and url -->
+          </div>
+        </column>
+      </row>
+      <row class="footer">
+        <column>
+          <div class="twitter">
+            <a href="https://twitter.com/gigalixir">
+              <img src="https://raw.githubusercontent.com/SparkPost/heml/master/examples/assets/twitter.png"/>
+            </a>
+          </div>
+          <div class="unsubscribe">
+            %Unsubscribe%
+          </div>
+          <div class="copyright">
+            © 2020 Invisible Software
+          </div>
+          <div class="terms">
+            <a href="https://www.gigalixir.com/terms-of-service.html">Terms of Service</a>
+            |
+            <a href="https://www.gigalixir.com/privacy-policy.html">Privacy Policy</a>
+            |
+            <a href="https://blog.gigalixir.com/">Blog</a>
+          </div>
+        </column>
+      </row>
+    </container>
+  </body>
 </heml>
