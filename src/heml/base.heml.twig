@@ -1,59 +1,37 @@
 <heml>
   <head>
-    <subject>Need Help Deploying?</subject>
-    <preview>We're here to help</preview>
+    <!--subject>Need Help Deploying?</subject-->
+    <!--preview>We're here to help</preview-->
     <style>
       body {
+        padding: 10px;
         background: #FFF;
-        padding: 20px;
       }
       container {
-        background: white;
-        margin: 0px auto;
-        max-width: 400px;
+        max-width: 500px;
       }
-      a img {
-        padding: 10px;
-        width: 157px;
-        height: 43px;
-        margin: auto;
+      .right {
+        text-align: right;
       }
-      .main {
-        background: rgb(245,245,245);
-        padding: 40px 60px 50px 60px;
+      container#main {
+        background-color: #F5F5F5;
       }
       h1 {
-        margin: 0;
-        padding: 0 0 10px 0;
         font-weight: bold;
         font-size: 24px;
       }
-      .footer {
-        padding: 20px;
+      .small {
         color: #CCC;
         font-size: 10px;
         line-height: 14px;
       }
-      .footer a {
-        text-decoration: none;
+      .small a {
         color: #CCC;
+        text-decoration: none;
       }
-      div {
-        text-align: center
-      }
-      /* button { */
-      /*   background-color: #425AE6; */
-      /*   padding: 15px 25px */
-      /* } */
-      .unsubscribe, .copyright {
-        padding: 5px;
-      }
-      .twitter {
-        padding: 5px 0 15px 0;
-      }
-      .twitter img {
-        width: 24px;
-        height: 24px;
+      button {
+        background-color: #425AE6;
+        padding: 15px;
       }
     </style>
   </head>
@@ -61,13 +39,29 @@
     <container>
       <row>
         <column>
-          <a href="https://gigalixir.com">
-            <img src="https://gigalixir.com/images/gigalixir_logo.png" alt="Gigalixir" />
-          </a>
+          <br/>
         </column>
       </row>
-      <row class="main">
-        <column>
+      <row>
+        <column large="11" small="11">
+          <a href="https://gigalixir.com">
+            <img width="157" height="43" src="https://gigalixir.com/images/gigalixir_logo.png" alt="Gigalixir" />
+          </a>
+        </column>
+        <column large="1" small="1">
+          <p>
+            <a href="https://twitter.com/gigalixir">
+             <img width="24" height="24" src="https://raw.githubusercontent.com/SparkPost/heml/master/examples/assets/twitter.png"/>
+            </a>
+          </p>
+        </column>
+      </row>
+    </container>
+    <container id="main">
+      <row>
+        <column large="2" small="2">&nbsp;</column>
+        <column large="8" small="8">
+          <br/>
           <h1>
             <div data-slot-container="1">
               <div data-slot="text">
@@ -75,35 +69,41 @@
               </div>
             </div>
           </h1>
-          <div data-slot-container="1">
-            <div data-slot="text">
-              If there's anything we can do to help you get going, just hit reply.
-              For step by step instructions on how to deploy, click the button below.
+          <p>
+            <div data-slot-container="1">
+              <div data-slot="text">
+                If there's anything we can do to help you get going, just hit reply.
+                For step by step instructions on how to deploy, click the button below.
+              </div>
             </div>
-            <!-- Drag a button here with background #425AE6 padding-top 20 and customize the text and url -->
-          </div>
+            <br/>
+          </p>
+          <p>
+            <div data-slot-container="1">
+              <div data-slot="button">
+                <button>Getting Started Guide</button>
+              </div>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+          </p>
         </column>
+        <column large="2" small="2">&nbsp;</column>
       </row>
-      <row class="footer">
+    </container>
+    <container>
+      <row>
         <column>
-          <div class="twitter">
-            <a href="https://twitter.com/gigalixir">
-              <img src="https://raw.githubusercontent.com/SparkPost/heml/master/examples/assets/twitter.png"/>
-            </a>
-          </div>
-          <div class="unsubscribe">
+          <p class="small">
             %Unsubscribe%
-          </div>
-          <div class="copyright">
+            <br/>
             © 2020 Invisible Software
-          </div>
-          <div class="terms">
             <a href="https://www.gigalixir.com/terms-of-service.html">Terms of Service</a>
-            |
             <a href="https://www.gigalixir.com/privacy-policy.html">Privacy Policy</a>
-            |
             <a href="https://blog.gigalixir.com/">Blog</a>
-          </div>
+          </p>
         </column>
       </row>
     </container>
